@@ -7,9 +7,9 @@ const createErrorMiddleware = require("./middleware/error");
 const registrationRoute = require("./routes/registration");
 const loginRoute = require("./routes/login");
 const createOrder = require("./routes/createOrder");
-
+const message = require("./routes/message");
+const chatHistory = require("./routes/chatHistory");
 const connectToDatabase = require("./config/database");
-connectToDatabase;
 
 const environment = process.env.NODE_ENV || "development";
 const errorMiddleware = createErrorMiddleware(logger);
@@ -20,6 +20,8 @@ app.use(bodyParser.json());
 app.use("/", registrationRoute);
 app.use("/", loginRoute);
 app.use("/", createOrder);
+app.use("/", message);
+app.use("/", chatHistory);
 
 connectToDatabase()
   .then(() => {

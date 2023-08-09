@@ -18,6 +18,8 @@
     "express-validator": "^7.0.1",
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^7.4.2",
+    "socket.io": "^4.7.2",
+    "socket.io-client": "^4.7.2",
     "winston": "^3.10.0"
   },
   "devDependencies": {
