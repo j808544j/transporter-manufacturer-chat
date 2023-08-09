@@ -1,4 +1,4 @@
-## Endpoint
+## API Documentation
 
 ### GET /messages
 
@@ -29,7 +29,6 @@ Make a POST request to the `/createorder` endpoint with the appropriate authenti
 POST /createorder
 Authorization: Bearer <authentication_token>
 Content-Type: application/json
-```
 
 {
 "orderID": "XB123",
@@ -40,6 +39,7 @@ Content-Type: application/json
 "manufacturer": "<manufacturer_id>",
 "transporter": "<transporter_id>"
 }
+```
 
 ### POST /message
 
