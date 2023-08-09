@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const createErrorMiddleware = require("./middleware/error");
 const registrationRoute = require("./routes/registration");
 const loginRoute = require("./routes/login");
+const createOrder = require("./routes/createOrder");
 
 const connectToDatabase = require("./config/database");
 connectToDatabase;
@@ -18,6 +19,7 @@ app.use(bodyParser.json());
 
 app.use("/", registrationRoute);
 app.use("/", loginRoute);
+app.use("/", createOrder);
 
 connectToDatabase()
   .then(() => {
