@@ -1,0 +1,5 @@
+.env.development
+.env.production
+error.log
+combined.log
+/node_modules
